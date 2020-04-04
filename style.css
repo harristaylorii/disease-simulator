@@ -1,0 +1,358 @@
+html, body {
+  margin: 0;
+}
+
+html, body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+
+footer {
+    position:absolute;
+    top:200vh;
+    bottom:0;
+    width:100%;
+    left:0;
+    right:0;
+    background-color: #333;
+    height: 40px;
+    color:white;
+    clear: both;
+}
+.main{
+    left:5px;
+    top: 60px;
+    position: relative;
+}
+h1 {
+  font-size: 2rem;
+  letter-spacing: -1px;
+  position: absolute;
+  margin: 0;
+  top: -4px;
+  left: 5px;
+  color:rgb(87,87,87);
+}
+
+h2 {
+    font-size:2rem;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 60px;
+    left:4px;
+}
+
+h3 {
+    position: relative;
+    top: 110px;
+    left: 4px;
+}
+
+
+p.new{
+    position: absolute;
+    top: 300px;
+    left: 4px;
+}
+p.about{
+    position: relative;
+    margin-left: auto;
+    top:100px;
+    left:4px;
+    color: black;
+    margin-right:auto;
+    font-size:1.25rem;
+}
+
+dl.about {
+    position: relative;
+    top: 150px;
+    font: 1.25rem;
+    float:left;
+    left: 20px;
+}
+
+dl.about2{
+    position: relative;
+    top: 250px;
+    font: 1.25rem;
+    left: 20px;
+}
+dt {
+    font:1.55rem;
+}
+
+ul.about2{
+    position: relative;
+    top: 135px;
+    font: 1.25rem;
+    clear:left;
+}
+
+h4 {
+    font-size: 1rem;
+    position:absolute;
+    top: 120px;
+    left:4px;
+}
+
+p.warn {
+    font-size: 1rem;
+    position: absolute;
+    top: 140px;
+    left:4px;
+}
+.sick {
+    position: absolute;
+    margin: 0;
+    top: 25px;
+    left: 5px;
+    color:rgb(87,87,87);
+  }
+
+.healthy {
+    position: absolute;
+    margin: 0;
+    top: 45px;
+    left: 5px;
+    color:rgb(87,87,87);
+}
+
+.recovered {
+    position: absolute;
+    margin: 0;
+    top: 65px;
+    left: 5px;
+    color:rgb(87,87,87);
+}
+
+.deceased {
+    position: absolute;
+    margin: 0;
+    top: 85px;
+    left: 5px;
+    color:rgb(87,87,87);
+}
+
+.Lnum {
+    position: absolute;
+    top: 35px;
+    left: 4px;
+}
+
+.num {
+    position: absolute;
+    top: 60px;
+    left: 4px;
+}
+
+.Lrecovery{
+    position:absolute;
+    left: 4px;
+    top: 85px;
+}
+
+.recovery {
+    position: absolute;
+    left: 4px;
+    top: 110px;
+}
+
+label.socialDistance {
+    position: absolute;
+    left: 4px;
+    top: 135px;
+}
+
+select.socialDistance {
+    position: absolute;
+    left: 4px;
+    top: 160px;
+}
+
+.quarantine{
+    position:absolute;
+    left:4px;
+    top:185px;
+}
+.quarantineL {
+    position:absolute;
+    left:4px;
+    top:210px;
+}
+
+.speed {
+    position: absolute;
+    top:235px;
+    left: 4px;
+}
+.speedL {
+  position: absolute;
+  top:260px;
+  left:4px;
+}
+
+.Pslider {
+    position: absolute;
+    top: 285px;
+    left: 4px;
+}
+
+.slider {
+    position: absolute;
+    top: 320px;
+    left: 4px;
+}
+
+.PfatalSlider {
+    position: absolute;
+    left: 4px;
+    top: 340px;
+}
+
+.fatalSlider {
+    position: absolute;
+    left: 4px;
+    top: 375px;
+}
+
+.again {
+    position: absolute;
+    left: 14%;
+    top: 60px;
+}
+
+ul.header {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:1;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+
+  .active {
+    background-color: #4CAF50;
+  }
+
+
+  .canvas{
+      position:relative;
+      top:80px;
+      width:70vw;
+      left:25vw;
+  }
+  .myCanvas {
+    position: absolute;
+    width: 100%;
+    border: 1px solid black; 
+    top:20px;
+    }
+  .explanation {
+      position: absolute;
+      top: 80vh;
+      width: 100%;
+  }
+  .variables {
+      position:absolute;
+      top: 103vh;
+  }
+ .variable {
+    position:absolute;
+    top: 108vh;
+    list-style-type: disc;
+  }
+
+
+
+
+
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  .dropdown .dropbtnA {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: #4CAF50;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #4CAF50;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+ 

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Disease Simulation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+    </style>
+  </head>
+
+  <body>
+    <!-- <div class="total">
+        <ul class="header">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="disease_simulation.html" class="active">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="connect.html">Connect</a></li>
+        </ul>  -->
+
+        
+        <div class="navbar">
+          <a href="index.html" >Home</a>
+          <div class="dropdown">
+            <button class="dropbtnA">Projects  
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="disease_simulation.html">Disease Simulation</a>
+              <a href="https://harristaylor.shinyapps.io/sports/" target="_blank" rel="noopener noreferrer">Sports Schedule</a>
+            </div>
+          </div> 
+          <a href="about.html">About</a>
+          <a href="connect.html">Connect</a>
+        </div>
+
+        <div class="main">
+          <h1>Disease Simulation</h1>
+
+
+          <label class="Lnum">Number of Individuals</label>
+          <input id="num" class="num" type="number" max="2000">
+          
+          <label class="Lrecovery">Recovery Time</label>
+          <select id="recovery" class="recovery">
+            <option value="fast">Fast</option>
+            <option value="medium">Medium</option>
+            <option value="slow">Slow</option>
+          </select>
+
+          <label class="socialDistance" id="sd">Social Distancing</label>
+          <select id="socialDistance" class="socialDistance">
+            <option value ="none">None</option>
+            <option value="light">Light</option>
+            <option value="moderate">Moderate</option>
+            <option value="extreme">Extreme</option>
+          </select>
+
+          <label class="quarantine" id="quar">Quarantine</label>
+          <select class="quarantineL" id="quarantine">
+            <option value="none">None</option>
+            <!--<option value="lax">Lax</option> -->
+            <!--<option value="moderate">Moderate</option> -->
+            <option value="draconian">Draconian</option>
+          </select>
+
+          <label class="speed" id="speedLabel">Movement Speed</label>
+          <select id="speed" class="speedL">
+            <option value="slow">Slow</option>
+            <option value="medium">Medium</option>
+            <option value="fast">Fast</option>
+          </select>
+
+          <input id="fatalSlider" class="fatalSlider" type="range" min=".1" max="75" value="2" step=.1>
+          <p class="PfatalSlider">Fatality Rate: <span id="fatalSliderSpan"></span>%</p>
+
+          <input id="mySlider" class="slider" type="range" min="0" max="100" value="70" step=5>
+          <p class="Pslider">Infection Rate: <span id="Slider"></span>%</p>
+
+          <button class="again" id="again">Run Simulation</button>
+
+        </div>
+
+          <div class="canvas">
+            <canvas class="myCanvas"></canvas>
+            <p class="healthy">Healthy: </p>
+            <p class="sick">Sick: </p>
+            <p class="recovered">Recovered: </p>
+            <p class="deceased">Deceased: </p>
+            <p class="explanation">
+              Welcome to your very own Disease Spread Simulator! Inspired by the works of <a href="https://www.washingtonpost.com/graphics/2020/world/corona-simulator/?itid=hp_hp-banner-low_virus-simulator520pm%3Ahomepage%2Fstory-ans" target="_blank" rel="noopener noreferrer">Harry Stevens</a> from the Washington Post
+              and <a href="https://www.youtube.com/watch?v=gxAaO2rsdIs" target="_blank" rel="noopener noreferrer">Grant Sanderson</a> on YouTube, I decided to create a program that allows users to explore disease spread in an interactive environment.
+              From social distancing to infection rate, you can simulate a variety of disease events from the
+               common cold (Recovery Time = Fast, Social Distancing = None, Infection Rate = 50%) 
+               to the Bubonic Plague (Recovery Time = Medium, Social Distancing = Light, Movement Speed = Slow, Infection Rate = 90%, Fatality Rate = 60%) to our own 
+               COVID-19 pandemic (Recovery Time = Slow, Social Distance = Extreme, Infection Rate= 75%, Fatality Rate = 2%).
+              <a href="connect.html">Let me know </a> if you enjoy the simulation or find a way to improve it! 
+            </p>
+            <p class="variables">Here are some descriptions for each of the variables you can play with:</p>
+            <dl class="variable">
+              <dt><li></li>Number of individuals</dt>
+                <dd>- These are all the dots seen on the screen. Be careful running the simulation with more than 1000 individuals. It may slow your browser. 
+                  You'll notice that when you have less than 300 individuals, they bounce off each other to better represent the infection rate. 
+                  If you more than 300 individuals, they just pass through each other, because repeatedly bouncing off deceased individuals in a community is just a little too morbid... </dd>
+              <dt><li></li>Recovery Time</dt>
+                <dd>- How long an individual stays "sick." A slow recovery time means they are sick longer.</dd>
+              <dt><li></li>Social Distancing</dt>
+                <dd>- These measures force a certain amount of individuals to "shelter in place."</dd>
+              <dt><li></li>Quarantine</dt>
+                <dd>- Produces an impermeable barrier that prevents individuals from coming into contact with one another. The quarantine works best with fewer individuals.</dd>
+              <dt><li></li>Movement Speed</dt>
+                <dd>- How quickly individuals are moving around.</dd>
+              <dt><li></li>Infection Rate</dt>
+                <dd>- The probability that a healthy individual becomes ill after coming in contact with a sick individual.</dd>
+              <dt><li></li>Fatality Rate</dt>
+                <dd>- The probability that an individual dies from the disease. Deceased individuals are represented by black dots.</dd>
+              <!--<dt><li></li>Zombies</dt>
+                <dd>- For fun! Hit yes to make sick individuals speed up by 40% and try to get all the living before their demise!</dd> -->
+            </dl>
+          </div>
+          <script src="main interactive.js"></script>
+        </div>
+        <div style="clear: both"></div>
+      </div>
+        <div class="footer">
+      <footer id="footer">  © 2020 Harris Taylor. All Rights Reserved</footer>
+  </div>
+    </body>
+</html>
